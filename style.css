@@ -1,0 +1,740 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+header {
+    padding: 25px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    color: #fff;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-list {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu-list a li {
+    font-size: 20px;
+}
+
+.menu-list a {
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(45deg, #16b8f3 50%, transparent 0) right /250% 100% no-repeat, linear-gradient(45deg, transparent 50%, #16b8f3 0) left /250% 100% no-repeat;
+    transition: 0.5s;
+    padding: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.menu-list a:hover {
+    background-position: center;
+    color: #fff
+}
+
+.sidemenu {
+    position: fixed;
+    top: -50%;
+    right: 0;
+    background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+    z-index: 99;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.close-icon {
+    width: 24px;
+    color: #000100;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    cursor: pointer;
+}
+
+.sidemenu-list {
+    list-style-type: none;
+}
+
+.sidemenu-list a {
+    text-decoration: none;
+    color: #000200;
+}
+
+.sidemenu-list a li {
+    margin-bottom: 10px;
+}
+
+.welcome-page {
+    padding: 7% 10%;
+    background: #000100;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-title {
+    background: linear-gradient(#22d1ee, #3d5af1);
+    background-clip: text;
+    font-size: 72px;
+    line-height: 1.1em;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.welcome-text {
+    color: rgb(110, 110, 110);
+    margin-top: 25px;
+    line-height: 1.4em;
+}
+
+.welcome-title::first-letter {
+    text-transform: capitalize;
+}
+
+.services {
+    padding-top: 100px;
+    background: #000200;
+    color: #fff;
+}
+
+
+
+.services-title {
+    text-align: center;
+    font-size: 36px;
+}
+
+.services-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: rgb(110, 110, 110);
+}
+
+.services-container {
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-img {
+    width: 100%;
+    display: inline-block;
+}
+
+.services-img img {
+    width: 100%;
+}
+
+.services-right {
+    display: flex;
+    gap: 20px;
+    padding: 25px 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-right h3 {
+    font-size: 24px;
+}
+
+.services-right p {
+    font-size: 20px;
+}
+
+.services-icon {
+    color: white;
+    fill: black;
+    width: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #1f242a;
+}
+
+
+.rental-cars {
+    background: #000200f1;
+    color: white;
+}
+
+.rental-car-container {
+    padding: 4% 10%;
+}
+
+.rental-car-container>h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.rental-car-container>p {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.company {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    line-height: 1.1;
+    gap: 30px;
+}
+
+.company-name {
+    display: flex;
+    gap: 10px;
+    background: #1f242a;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.active {
+    background: #000200 !important;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    box-shadow: rgba(216, 216, 216, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.company-name:hover {
+    cursor: pointer;
+    background: #000200;
+}
+
+.company-name h5 {
+    font-size: 24px;
+}
+
+.company-logo {
+    width: 32px;
+}
+
+.company-box .swiper-wrapper {
+    margin-top: 50px;
+}
+
+.company-box h3 {
+    font-size: 24px;
+}
+
+.company-box p {
+    margin: 10px 0;
+    color: #1f242a;
+}
+
+.details {
+    background: #d8d8d8d8;
+    padding: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #000200;
+}
+
+.price {
+    color: #29387a !important;
+    font-weight: bold;
+}
+
+.monthly-price {
+    color: #000100;
+    font-weight: lighter;
+}
+
+.book-btn {
+    margin: 15px 0;
+    padding: 9px 18px;
+    background: #000100;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.book-btn:hover {
+    color: #000100;
+    background: rgb(212, 212, 212);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+.company-car {
+    text-align: left;
+}
+
+.company-car img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: -5px;
+}
+
+.swiper {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.nav-buttons {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.left-icon {
+    font-size: 18px;
+    padding: 10px;
+    background: black;
+    display: inline-block;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.right-icon {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    background: black;
+    cursor: pointer;
+}
+
+.left-icon:active {
+    background: #fff;
+    color: black;
+    border: none;
+}
+
+
+.right-icon:active {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+
+.subscribe {
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    background: #16b8f3;
+    gap: 20px;
+}
+
+.subscribe-left {
+    padding: 15px;
+}
+
+.subscribe-left h1 {
+    font-size: 38px;
+    line-height: 1.2em;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.subscribe-left p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    color: #011b01de;
+}
+
+.subscribe-form {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    display: inline-block;
+    padding: 20px;
+    background: black;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.subscribe-form button {
+    display: inline-block;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    background: #ef3939;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background: #bd250a;
+    color: #fff;
+}
+
+.subscribe-img {
+    width: 100%;
+}
+
+
+footer {
+    background: #000200;
+    padding: 30px;
+}
+
+footer h3 {
+    text-align: center;
+    ;
+    color: #d8d8d8;
+}
+
+
+
+/*  Tablet */
+
+@media only screen and (max-width: 810px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .menu-list {
+        gap: 10px;
+    }
+
+    .menu-list a li {
+        font-size: 16px;
+    }
+
+
+    .welcome-page {
+        padding: 20px;
+    }
+
+    .welcome-title {
+        font-size: 40px;
+    }
+
+    .welcome-text {
+        font-size: 20px;
+    }
+
+    .welcome-img {
+        width: 100%;
+    }
+
+    .services {
+        padding: 20px;
+    }
+
+    .services-img {
+        width: 50%;
+        margin-top: 15px;
+    }
+
+    .services-img img {
+        width: 100%;
+    }
+
+    .services-title {
+        font-size: 26px;
+    }
+
+    .services-text {
+        font-size: 20px;
+    }
+
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .service-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .services-right {
+        display: block;
+        padding: 0;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    .services-icon {
+        width: 30px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .services-right h3 {
+        font-size: 16px;
+    }
+
+    .services-right p {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .rental-car-container {
+        padding: 20px;
+    }
+
+    .rental-car-container h1 {
+        font-size: 26px;
+    }
+
+    .rental-car-container p {
+        font-size: 16px;
+    }
+
+    .company {
+        margin-top: 30px;
+    }
+
+    .company-name {
+        padding: 7px 14px;
+    }
+
+    .company-name h5 {
+        font-size: 16px;
+    }
+
+    .swiper {
+        margin-top: 0;
+    }
+
+    .subscribe {
+        padding: 20px;
+    }
+
+    .subscribe-left {
+        padding: 15px;
+    }
+
+    .subscribe-left h1 {
+        font-size: 24px;
+    }
+
+    .subscribe-left p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .subscribe-form input {
+        padding: 10px;
+    }
+
+    .subscribe-form button {
+        padding: 10px;
+    }
+
+    .subscribe-img {
+        width: 100%;
+    }
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 400px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    .menu-icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .menu-list a li {
+        font-size: 16px;
+    }
+
+    .container {
+        display: block;
+        text-align: center;
+    }
+
+    .welcome-title {
+        font-size: 32px;
+    }
+
+    .welcome-text {
+        font-size: 16px;
+    }
+
+    .welcome-img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .services-img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .services-img img {
+        width: 100%;
+    }
+
+    .services-title {
+        font-size: 24px;
+    }
+
+    .services-text {
+        font-size: 16px;
+    }
+
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .service-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services-right {
+        display: block;
+        padding: 0;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    .services-icon {
+        width: 30px;
+        padding: 5px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .services-right h3 {
+        font-size: 16px;
+    }
+
+    .services-right p {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .rental-car-container {
+        padding: 20px;
+    }
+
+    .rental-car-container h1 {
+        font-size: 24px;
+    }
+
+    .rental-car-container p {
+        font-size: 16px;
+    }
+
+    .company {
+        margin-top: 30px;
+        gap: 10px;
+    }
+
+    .company-logo {
+        width: 20px;
+    }
+
+    .company-name {
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .company-name h5 {
+        font-size: 16px;
+    }
+
+    .subscribe {
+        display: block;
+        text-align: center;
+    }
+
+    .subscribe-left {
+        padding: 15px;
+    }
+
+    .subscribe-left h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .subscribe-left p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .subscribe-form input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .subscribe-form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .subscribe-img {
+        width: 100%;
+        display: none;
+    }
+
+    footer h3 {
+        font-size: 16px;
+    }
+}
